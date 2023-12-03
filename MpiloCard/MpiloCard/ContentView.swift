@@ -11,12 +11,13 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             Color(red: 0.09, green: 0.63, blue: 0.52, opacity: 1.00).ignoresSafeArea(edges: .all)
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            VStack {
+                Image("beerPillz").resizable().aspectRatio(contentMode: .fit).frame(width: 250, height: 250).clipShape(Circle())
+                
+                Text("Mpilo Pillz").font(Font.custom("Pacifico-Regular", size: 40)).bold().foregroundStyle(.white)
+                Text("iOS Developer").foregroundStyle(.white).font(.system(size: 25))
+            }
         }
-        .padding()
     }
 }
 
