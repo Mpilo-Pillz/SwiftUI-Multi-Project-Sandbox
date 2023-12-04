@@ -21,6 +21,7 @@ struct ContentView: View {
                    .fill(Color.white)
                    .frame(height: 50)
                    .foregroundColor(.white)
+                   .padding(.all)
                    .overlay {
                        HStack {
                            Image(systemName: "phone.fill").foregroundStyle(Color(red: 0.09, green: 0.63, blue: 0.52, opacity: 1.00))
@@ -28,6 +29,7 @@ struct ContentView: View {
                        }
                        
                    }
+                
             }
         }
     }
