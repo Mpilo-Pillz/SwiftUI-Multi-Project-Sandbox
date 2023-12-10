@@ -10,8 +10,8 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            List {
-                Text("Hello, world!")
+            List(posts) { post in
+                Text(post.title)
             }
             .navigationTitle("H4X0R NEWS")
         }
