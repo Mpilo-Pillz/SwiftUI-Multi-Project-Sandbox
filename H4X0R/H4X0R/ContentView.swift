@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var newtworkManager = NetworkManager() // set up the propert as a listener aka subscibe in angular
+    
     var body: some View {
         NavigationView {
-            List(posts) { post in
+            List(newtworkManager.posts) { post in
                 Text(post.title)
             }
             .navigationTitle("H4X0R NEWS")
         }
-        
+        .onAppear(perform: {
+            newtworkManager.fetchData()
+        })
     }
 }
 
@@ -23,13 +28,3 @@ struct ContentView: View {
     ContentView()
 }
 
-struct Post: Identifiable {
-    let id: String
-    let title: String
-}
-
-let posts = [
-    Post(id: "1", title: "Eita"),
-    Post(id: "2", title: "Ola"),
-    Post(id: "3", title: "Fede")
-]
