@@ -14,7 +14,10 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(newtworkManager.posts) { post in
-                Text(post.title)
+                HStack {
+                    Text(String(post.points))
+                    Text(post.title)
+                }
             }
             .navigationTitle("H4X0R NEWS")
         }
