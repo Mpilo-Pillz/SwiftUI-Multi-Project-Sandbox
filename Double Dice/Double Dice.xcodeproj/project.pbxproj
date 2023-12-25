@@ -15,6 +15,7 @@
 		C4E641382B3CCA7800A3B18B /* Double_DiceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E641372B3CCA7800A3B18B /* Double_DiceUITests.swift */; };
 		C4E6413A2B3CCA7800A3B18B /* Double_DiceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E641392B3CCA7800A3B18B /* Double_DiceUITestsLaunchTests.swift */; };
 		C4E641482B3CCC2700A3B18B /* DiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E641472B3CCC2700A3B18B /* DiceView.swift */; };
+		C4E6414B2B3CD6C300A3B18B /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E6414A2B3CD6C300A3B18B /* GameLogic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		C4E641372B3CCA7800A3B18B /* Double_DiceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double_DiceUITests.swift; sourceTree = "<group>"; };
 		C4E641392B3CCA7800A3B18B /* Double_DiceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double_DiceUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C4E641472B3CCC2700A3B18B /* DiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceView.swift; sourceTree = "<group>"; };
+		C4E6414A2B3CD6C300A3B18B /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +98,9 @@
 		C4E6411B2B3CCA7600A3B18B /* Double Dice */ = {
 			isa = PBXGroup;
 			children = (
-				C4E6411C2B3CCA7600A3B18B /* Double_DiceApp.swift */,
+				C4E641492B3CD16600A3B18B /* Models */,
 				C4E641462B3CCC0000A3B18B /* Views */,
+				C4E6411C2B3CCA7600A3B18B /* Double_DiceApp.swift */,
 				C4E641202B3CCA7700A3B18B /* Assets.xcassets */,
 				C4E641222B3CCA7700A3B18B /* Preview Content */,
 			);
@@ -136,6 +139,14 @@
 				C4E641472B3CCC2700A3B18B /* DiceView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C4E641492B3CD16600A3B18B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C4E6414A2B3CD6C300A3B18B /* GameLogic.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +281,7 @@
 			files = (
 				C4E6411F2B3CCA7600A3B18B /* ContentView.swift in Sources */,
 				C4E641482B3CCC2700A3B18B /* DiceView.swift in Sources */,
+				C4E6414B2B3CD6C300A3B18B /* GameLogic.swift in Sources */,
 				C4E6411D2B3CCA7600A3B18B /* Double_DiceApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
