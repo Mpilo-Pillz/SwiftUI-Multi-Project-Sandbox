@@ -13,10 +13,11 @@ struct DiceView: View {
         Image("dice\(diceNumber)")
             .resizable()
             .aspectRatio(contentMode: .fit)
+            .shadow(radius: 10)
             .padding()
     }
 }
 
 #Preview {
-    DiceView()
+    DiceView(diceNumber: 1)
 }
