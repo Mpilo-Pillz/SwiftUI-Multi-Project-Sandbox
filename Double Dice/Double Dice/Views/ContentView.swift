@@ -23,6 +23,11 @@ struct ContentView: View {
                 .ignoresSafeArea(edges: .all)
             VStack {
                 Image("diceeLogo")
+                Text("Score: \(gameLogic.userScore)")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .foregroundStyle(.white)
+                            .padding()
                 Spacer()
                 HStack{
                     DiceView(diceNumber: leftDiceNumber)
@@ -34,7 +39,7 @@ struct ContentView: View {
                     Text("Roll")
                         .font(.system(size: 40))
                         .fontWeight(.heavy)
-                        .foregroundColor(.white)
+                        .foregroundStyle(.white)
                         .padding()
                         .frame(width: 250, height: 60)
                         .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.orange]), startPoint: .leading, endPoint: .trailing))
