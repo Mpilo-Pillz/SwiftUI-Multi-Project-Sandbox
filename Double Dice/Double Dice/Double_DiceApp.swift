@@ -11,7 +11,7 @@ import SwiftUI
 struct Double_DiceApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(gameLogic: GameLogic())
         }
     }
 }
