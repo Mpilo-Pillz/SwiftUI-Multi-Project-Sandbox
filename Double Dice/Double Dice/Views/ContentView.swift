@@ -11,6 +11,8 @@ struct ContentView: View {
     
     let diceRange = 1...6
     
+    @State var gameLogic: GameLogic
+    
     @State var leftDiceNumber = 5
     @State var rightDiceNumber = 6
     
@@ -49,11 +51,10 @@ struct ContentView: View {
     func buttonPressed() {
         leftDiceNumber = Int.random(in: diceRange)
         rightDiceNumber = Int.random(in: diceRange)
+        gameLogic.checkIfDouble(diceOne: leftDiceNumber, diceTwo: rightDiceNumber)
     }
 }
 
-
-
 #Preview {
-    ContentView()
+    ContentView(gameLogic: GameLogic())
 }
