@@ -16,6 +16,7 @@
 		C4E6413A2B3CCA7800A3B18B /* Double_DiceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E641392B3CCA7800A3B18B /* Double_DiceUITestsLaunchTests.swift */; };
 		C4E641482B3CCC2700A3B18B /* DiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E641472B3CCC2700A3B18B /* DiceView.swift */; };
 		C4E6414B2B3CD6C300A3B18B /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E6414A2B3CD6C300A3B18B /* GameLogic.swift */; };
+		C4E6414D2B3F757400A3B18B /* GameStatsText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E6414C2B3F757400A3B18B /* GameStatsText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		C4E641392B3CCA7800A3B18B /* Double_DiceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double_DiceUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C4E641472B3CCC2700A3B18B /* DiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceView.swift; sourceTree = "<group>"; };
 		C4E6414A2B3CD6C300A3B18B /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
+		C4E6414C2B3F757400A3B18B /* GameStatsText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatsText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			children = (
 				C4E6411E2B3CCA7600A3B18B /* ContentView.swift */,
 				C4E641472B3CCC2700A3B18B /* DiceView.swift */,
+				C4E6414C2B3F757400A3B18B /* GameStatsText.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4E6414D2B3F757400A3B18B /* GameStatsText.swift in Sources */,
 				C4E6411F2B3CCA7600A3B18B /* ContentView.swift in Sources */,
 				C4E641482B3CCC2700A3B18B /* DiceView.swift in Sources */,
 				C4E6414B2B3CD6C300A3B18B /* GameLogic.swift in Sources */,

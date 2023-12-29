@@ -65,15 +65,4 @@ struct ContentView: View {
     ContentView(gameLogic: GameLogic())
 }
 
-struct GameStatsText: View {
-    let text: String
-    let size: Font
-    let color: any ShapeStyle
-    
-    var body: some View {
-        Text(text)
-            .font(size)
-            .fontWeight(.bold)
-            .foregroundStyle(color)
-    }
-}
+
