@@ -24,18 +24,10 @@ struct ContentView: View {
             VStack {
                 Image("diceeLogo")
                 VStack(alignment: .leading) {
-                    Text("Score: \(gameLogic.userScore)")
-                                .font(.title)
-                                .fontWeight(.bold)
-                                .foregroundStyle(.white)
-                                
-                    Text("Dice Rolls left: \(gameLogic.diceRollsLeft)")
-                        .font(.headline)
-                                 .fontWeight(.bold)
-                                 .foregroundStyle(.white)
-                                 
+                    GameStatsText(text: "Score: \(gameLogic.userScore)", size: .title, color: .white)
+                    GameStatsText(text: "Dice Rolls left: \(gameLogic.diceRollsLeft)", size: .headline, color: .white)
                 }
-              
+                
                 Spacer()
                 HStack{
                     DiceView(diceNumber: leftDiceNumber)
@@ -59,7 +51,7 @@ struct ContentView: View {
                 
             }
         }
-       
+        
     }
     
     func buttonPressed() {
@@ -71,4 +63,17 @@ struct ContentView: View {
 
 #Preview {
     ContentView(gameLogic: GameLogic())
+}
+
+struct GameStatsText: View {
+    let text: String
+    let size: Font
+    let color: any ShapeStyle
+    
+    var body: some View {
+        Text(text)
+            .font(size)
+            .fontWeight(.bold)
+            .foregroundStyle(color)
+    }
 }
