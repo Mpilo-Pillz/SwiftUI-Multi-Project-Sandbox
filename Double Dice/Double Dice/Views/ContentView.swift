@@ -23,11 +23,19 @@ struct ContentView: View {
                 .ignoresSafeArea(edges: .all)
             VStack {
                 Image("diceeLogo")
-                Text("Score: \(gameLogic.userScore)")
-                            .font(.title)
-                            .fontWeight(.bold)
-                            .foregroundStyle(.white)
-                            .padding()
+                VStack(alignment: .leading) {
+                    Text("Score: \(gameLogic.userScore)")
+                                .font(.title)
+                                .fontWeight(.bold)
+                                .foregroundStyle(.white)
+                                
+                    Text("Dice Rolls left: \(gameLogic.diceRollsLeft)")
+                        .font(.headline)
+                                 .fontWeight(.bold)
+                                 .foregroundStyle(.white)
+                                 
+                }
+              
                 Spacer()
                 HStack{
                     DiceView(diceNumber: leftDiceNumber)
@@ -48,6 +56,7 @@ struct ContentView: View {
                 }
                 .padding(.horizontal)
                 .padding(.bottom, 20)
+                
             }
         }
        
