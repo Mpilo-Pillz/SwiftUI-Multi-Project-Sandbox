@@ -9,7 +9,7 @@ import Foundation
 
 struct GameLogic {
     
-    var numberOfDiceRollsLeft: Int = 10
+    var diceRollsLeft: Int = 10
     var userScore: Int = 0
     
     private func isDoube(diceOne: Int, diceTwo: Int) -> Bool {
@@ -20,9 +20,9 @@ struct GameLogic {
         
         if isDoube(diceOne: diceOne, diceTwo: diceTwo) {
             userScore = userScore + diceOne + diceTwo
-            numberOfDiceRollsLeft += 1
+            diceRollsLeft += 1
         } else {
-            numberOfDiceRollsLeft -= 1
+            diceRollsLeft -= 1
         }
     }
     
