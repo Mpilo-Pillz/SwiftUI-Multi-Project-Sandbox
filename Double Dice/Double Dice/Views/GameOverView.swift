@@ -11,8 +11,8 @@ struct GameOverView: View {
     let finalScore = 12
     var body: some View {
         VStack {
-            Text("Game Over!")
-            Text("Your Score: \(finalScore)")
+            GameStatsText(text: "Game Over!", size: .title, color: .white)
+            GameStatsText(text: "Your Score: \(finalScore)", size: .headline, color: .white)
         }
     }
 }
