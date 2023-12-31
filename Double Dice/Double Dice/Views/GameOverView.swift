@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct GameOverView: View {
+    let finalScore = 12
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Game Over!")
+            Text("Your Score: \(finalScore)")
+        }
     }
 }
 
