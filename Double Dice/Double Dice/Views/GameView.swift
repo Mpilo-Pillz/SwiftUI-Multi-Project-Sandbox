@@ -18,12 +18,8 @@ struct GameView: View {
     
     var body: some View {
         
-        ZStack {
-            Image("background")
-                .resizable()
-                .ignoresSafeArea(edges: .all)
-            VStack {
-                Image("diceeLogo")
+           
+               
                 VStack(alignment: .leading) {
                     GameStatsText(text: "Score: \(gameLogic.userScore)", size: .title, color: .white)
                     GameStatsText(text: "Dice Rolls left: \(gameLogic.diceRollsLeft)", size: .headline, color: .white)
@@ -50,9 +46,7 @@ struct GameView: View {
                 .padding(.horizontal)
                 .padding(.bottom, 20)
                 
-            }
-        }
-        
+            
     }
     func buttonPressed() {
         leftDiceNumber = Int.random(in: diceRange)
