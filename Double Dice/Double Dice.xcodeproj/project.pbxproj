@@ -19,6 +19,7 @@
 		C4E6414D2B3F757400A3B18B /* GameStatsText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E6414C2B3F757400A3B18B /* GameStatsText.swift */; };
 		C4E6414F2B41CEE200A3B18B /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E6414E2B41CEE200A3B18B /* GameOverView.swift */; };
 		C4E641512B41CF1F00A3B18B /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E641502B41CF1F00A3B18B /* GameView.swift */; };
+		C4E641532B41DCA800A3B18B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E641522B41DCA800A3B18B /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		C4E6414C2B3F757400A3B18B /* GameStatsText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatsText.swift; sourceTree = "<group>"; };
 		C4E6414E2B41CEE200A3B18B /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
 		C4E641502B41CF1F00A3B18B /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		C4E641522B41DCA800A3B18B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				C4E641492B3CD16600A3B18B /* Models */,
 				C4E641462B3CCC0000A3B18B /* Views */,
 				C4E6411C2B3CCA7600A3B18B /* Double_DiceApp.swift */,
+				C4E641522B41DCA800A3B18B /* Constants.swift */,
 				C4E641202B3CCA7700A3B18B /* Assets.xcassets */,
 				C4E641222B3CCA7700A3B18B /* Preview Content */,
 			);
@@ -295,6 +298,7 @@
 				C4E6414F2B41CEE200A3B18B /* GameOverView.swift in Sources */,
 				C4E6411D2B3CCA7600A3B18B /* Double_DiceApp.swift in Sources */,
 				C4E641512B41CF1F00A3B18B /* GameView.swift in Sources */,
+				C4E641532B41DCA800A3B18B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
