@@ -13,11 +13,11 @@ struct ContentView: View {
 
     var body: some View {
         ZStack {
-                Image("background")
+            Image(K.backgroundImage)
                     .resizable()
                     .ignoresSafeArea(edges: .all)
                 VStack {
-                    Image("diceeLogo")
+                    Image(K.doubleDiceLogo)
                 if gameLogic.diceRollsLeft > 0 {
                     GameView(gameLogic: $gameLogic)
                 } else {
