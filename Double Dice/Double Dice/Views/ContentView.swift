@@ -12,16 +12,20 @@ struct ContentView: View {
     @State var gameLogic: GameLogic
 
     var body: some View {
-        VStack {
-            if gameLogic.diceRollsLeft > 0 {
-                GameView(gameLogic: $gameLogic)
-            } else {
-                GameOverView()
+        ZStack {
+                Image("background")
+                    .resizable()
+                    .ignoresSafeArea(edges: .all)
+                VStack {
+                    Image("diceeLogo")
+                if gameLogic.diceRollsLeft > 0 {
+                    GameView(gameLogic: $gameLogic)
+                } else {
+                    GameOverView()
+                }
             }
         }
-        
     }
-    
 }
 
 #Preview {
