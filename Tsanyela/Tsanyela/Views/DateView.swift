@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct DateView: View {
+    let date: Date
+    
+    private var weekday: String {
+        date.formatted(Date.FormatStyle()
+            .weekday(.abbreviated)).localizedUppercase
+    }
+    
+    private var day: String {
+        date.formatted(Date.FormatStyle().day())
+    }
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Text("\(weekday)").font(.headline)
+            Text("\(day)").font(.headline)
+        }
     }
 }
 
 #Preview {
-    DateView()
+    DateView(date: Date())
 }
