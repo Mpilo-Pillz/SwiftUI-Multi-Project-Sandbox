@@ -8,8 +8,19 @@
 import SwiftUI
 
 struct ChoreListView: View {
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            Text("Chores for the day")
+        }
+        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .center)
+        .padding()
+        #if os(iOS)
+        .navigationTitle("title")
+        #elseif os(macOS)
+        .navigationSubtitle("title")
+        #endif
     }
 }
 
