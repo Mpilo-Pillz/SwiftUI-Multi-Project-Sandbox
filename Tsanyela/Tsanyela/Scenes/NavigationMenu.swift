@@ -15,10 +15,10 @@ struct NavigationMenu: Scene {
                     .tabItem {
                         Label("Staff", systemImage: "person.2.fill")
                     }
-                ChoreListView()
-                    .tabItem {
-                        Label("Chores", systemImage: "tray.2.fill")
-                    }
+//                ChoreListView()
+//                    .tabItem {
+//                        Label("Chores", systemImage: "tray.2.fill")
+//                    }
                 
                 ProfileView()
                     .tabItem {
