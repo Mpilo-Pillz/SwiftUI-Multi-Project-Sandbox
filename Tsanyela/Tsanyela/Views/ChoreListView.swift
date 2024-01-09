@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct ChoreListView: View {
+    let choreItem: ChoreItem
     
+    private var title: String {
+        choreItem.createdDate.formatted(Date.FormatStyle()
+            .weekday(.abbreviated)
+            .month(.abbreviated)
+            .day()
+            .year())
+    }
     
     var body: some View {
         ScrollView {
-            Text("Chores for the day")
+            Text(choreItem.text)
         }
         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .center)
         .padding()
@@ -24,6 +32,6 @@ struct ChoreListView: View {
     }
 }
 
-#Preview {
-    ChoreListView()
-}
+//#Preview {
+//    ChoreListView()
+//}
