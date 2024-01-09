@@ -8,12 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var chore = Chore()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            List(chore.chores) { chore in
+                NavigationLink(value: chore) {
+                    ChoreListItem(choreItem: chore)
+                }
+            }
+            .navigationDestination(for: ChoreItem.self) {chore in
+                ChoreListView(choreItem: chore)
+            }
+            .navigationTitle("Chore")
+            .toolbar {
+                ToolbarItem {
+                    Button {
+                        print("Add new chore")
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                }
+            }
         }
         .padding()
     }
