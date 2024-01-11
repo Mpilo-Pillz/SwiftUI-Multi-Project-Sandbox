@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4ABE2E12B5068A200285DB8 /* ChoreListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ABE2E02B5068A200285DB8 /* ChoreListView.swift */; };
 		C4C0D36B2B4C839900C4FB7B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0D36A2B4C839900C4FB7B /* ProfileView.swift */; };
-		C4C0D36D2B4C84DB00C4FB7B /* ChoreListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0D36C2B4C84DA00C4FB7B /* ChoreListView.swift */; };
+		C4C0D36D2B4C84DB00C4FB7B /* ChoreListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0D36C2B4C84DA00C4FB7B /* ChoreListItemView.swift */; };
 		C4C0D36F2B4C856C00C4FB7B /* ChoreListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0D36E2B4C856C00C4FB7B /* ChoreListItem.swift */; };
 		C4C0D3712B4C85B600C4FB7B /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0D3702B4C85B600C4FB7B /* DateView.swift */; };
 		C4C0D3742B4C891400C4FB7B /* Chore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0D3732B4C891400C4FB7B /* Chore.swift */; };
@@ -41,8 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C4ABE2E02B5068A200285DB8 /* ChoreListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreListView.swift; sourceTree = "<group>"; };
 		C4C0D36A2B4C839900C4FB7B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		C4C0D36C2B4C84DA00C4FB7B /* ChoreListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreListView.swift; sourceTree = "<group>"; };
+		C4C0D36C2B4C84DA00C4FB7B /* ChoreListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreListItemView.swift; sourceTree = "<group>"; };
 		C4C0D36E2B4C856C00C4FB7B /* ChoreListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreListItem.swift; sourceTree = "<group>"; };
 		C4C0D3702B4C85B600C4FB7B /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
 		C4C0D3732B4C891400C4FB7B /* Chore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chore.swift; sourceTree = "<group>"; };
@@ -89,9 +91,10 @@
 			isa = PBXGroup;
 			children = (
 				C4C0D36A2B4C839900C4FB7B /* ProfileView.swift */,
-				C4C0D36C2B4C84DA00C4FB7B /* ChoreListView.swift */,
+				C4C0D36C2B4C84DA00C4FB7B /* ChoreListItemView.swift */,
 				C4C0D36E2B4C856C00C4FB7B /* ChoreListItem.swift */,
 				C4C0D3702B4C85B600C4FB7B /* DateView.swift */,
+				C4ABE2E02B5068A200285DB8 /* ChoreListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -302,7 +305,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4C0D36D2B4C84DB00C4FB7B /* ChoreListView.swift in Sources */,
+				C4ABE2E12B5068A200285DB8 /* ChoreListView.swift in Sources */,
+				C4C0D36D2B4C84DB00C4FB7B /* ChoreListItemView.swift in Sources */,
 				C4C0D36B2B4C839900C4FB7B /* ProfileView.swift in Sources */,
 				C4C0D3712B4C85B600C4FB7B /* DateView.swift in Sources */,
 				C4C0D36F2B4C856C00C4FB7B /* ChoreListItem.swift in Sources */,

@@ -18,7 +18,7 @@ struct ContentView: View {
                 }
             }
             .navigationDestination(for: ChoreItem.self) {chore in
-                ChoreListView(choreItem: chore)
+                ChoreListItemView(choreItem: chore)
             }
             .navigationTitle("Chore")
             .toolbar {

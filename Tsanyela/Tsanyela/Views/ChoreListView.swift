@@ -2,36 +2,39 @@
 //  ChoreListView.swift
 //  Tsanyela
 //
-//  Created by Mpilo Pillz on 2024/01/08.
+//  Created by Mpilo Pillz on 2024/01/11.
 //
 
 import SwiftUI
 
 struct ChoreListView: View {
-    let choreItem: ChoreItem
-    
-    private var title: String {
-        choreItem.createdDate.formatted(Date.FormatStyle()
-            .weekday(.abbreviated)
-            .month(.abbreviated)
-            .day()
-            .year())
-    }
+    @StateObject private var chore = Chore()
     
     var body: some View {
-        ScrollView {
-            Text(choreItem.text)
+        NavigationStack {
+            List(chore.chores) { chore in
+                NavigationLink(value: chore) {
+                    ChoreListItem(choreItem: chore)
+                }
+            }
+            .navigationDestination(for: ChoreItem.self) {chore in
+                ChoreListItemView(choreItem: chore)
+            }
+            .navigationTitle("Chore")
+            .toolbar {
+                ToolbarItem {
+                    Button {
+                        print("Add new chore")
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                }
+            }
         }
-        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .center)
         .padding()
-        #if os(iOS)
-        .navigationTitle("title")
-        #elseif os(macOS)
-        .navigationSubtitle("title")
-        #endif
     }
 }
 
-//#Preview {
-//    ChoreListView()
-//}
+#Preview {
+    ChoreListView()
+}
