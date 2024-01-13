@@ -7,10 +7,15 @@
 
 import Foundation
 
-struct Staff {
-  let id: Int
-  let name: String
-    let staffType: StaffType;
+class Staff: ObservableObject{
+    @Published var staff: [StaffItem] = [
+    StaffItem(name: "Neruson", dailyRate: 350, staffType: "Gardener"),
+    StaffItem(name: "Sanene", dailyRate: 300, staffType: "Helper")
+    ]
+    
+//  let id: Int
+//  let name: String
+//    let staffType: StaffType;
 
 }
 
