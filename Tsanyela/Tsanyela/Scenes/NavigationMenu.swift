@@ -16,7 +16,7 @@ struct NavigationMenu: Scene {
                         Label("Chores", systemImage: "tray.2.fill")
                     }
                 
-                StaffView()
+                StaffListView()
                     .tabItem {
                         Label("Staff", systemImage: "person.2.fill")
                     }
