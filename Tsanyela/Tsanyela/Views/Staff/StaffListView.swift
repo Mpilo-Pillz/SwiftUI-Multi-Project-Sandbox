@@ -8,8 +8,28 @@
 import SwiftUI
 
 struct StaffListView: View {
+    @StateObject private var staff = Staff()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            List(staff.staff) { staff in
+                NavigationLink(value: staff) {
+                    StaffItemView(staffItem: staff)
+                }
+            }.navigationDestination(for: StaffItem.self) { staff in
+                StaffView(staffItem: staff)
+            }
+            .navigationTitle("Staff")
+            .toolbar {
+                ToolbarItem{
+                    Button {
+                        print("TODO implement")
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                }
+            }
+        }
     }
 }
 
