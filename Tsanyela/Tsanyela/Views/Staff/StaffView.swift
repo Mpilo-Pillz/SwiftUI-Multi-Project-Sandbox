@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct StaffView: View {
-    
+    let staffItem: StaffItem
     var body: some View {
-        Text("Staff View")
+        Text(staffItem.name)
+//        Text(staffItem.dailyRate)
     }
 }
 
-#Preview {
-    StaffView()
-}
+//#Preview {
+//    StaffView()
+//}
