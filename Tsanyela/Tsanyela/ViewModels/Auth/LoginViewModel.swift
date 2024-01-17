@@ -8,37 +8,29 @@
 import Foundation
 
 class LoginViewModel: ObservableObject {
-    @Published var username = ""
-    @Published var password = ""
-    @Published var isLoading = false
-    @Published var loginError: Error?
-    
+    @Published var username: String = ""
+    @Published var password: String = ""
+    @Published var isLoggedIn: Bool = false
+    @Published var isLoading: Bool = false
+    @Published var errorMessage: String?
+
     func login() async {
-        guard !username.isEmpty, !password.isEmpty else {
-            loginError = NSError(domain: "", code: 400, userInfo: [NSLocalizedDescriptionKey: "Username and password are required."])
-            return
-        }
-        
         isLoading = true
+        errorMessage = nil
         
         do {
-            let user = try await performLogin(username: username, password: password)
-            print("Login successful for user: \(user.username)")
+            let user = try await loginUser(username: username, password: password)
+            isLoggedIn = true
         } catch {
-            loginError = error
+            
+            errorMessage = error.localizedDescription
         }
         
         isLoading = false
     }
     
-    func performLogin(username: String, password: String) async throws -> User {
-        var loginSuccessful = false
-        var grantAccess = true
-        if grantAccess {
-            loginSuccessful = true
-                    return User(username: username, password: password)
-                } else {
-                    throw NSError(domain: "", code: 401, userInfo: [NSLocalizedDescriptionKey: "Invalid credentials."])
-                }
+    private func loginUser(username: String, password: String) async throws -> User {
+        let dummyUser = User(id: "123", name: "John Doe")
+        return dummyUser
     }
 }
