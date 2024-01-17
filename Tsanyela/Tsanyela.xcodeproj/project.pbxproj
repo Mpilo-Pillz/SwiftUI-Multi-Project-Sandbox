@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C41194932B53249600FA863B /* StaffItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41194922B53249500FA863B /* StaffItemView.swift */; };
 		C41194952B53274000FA863B /* StaffListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41194942B53274000FA863B /* StaffListView.swift */; };
+		C41B35872B586E27001C2CD7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41B35862B586E27001C2CD7 /* User.swift */; };
+		C41B358B2B586EA5001C2CD7 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41B358A2B586EA5001C2CD7 /* LoginViewModel.swift */; };
 		C4ABE2E12B5068A200285DB8 /* ChoreListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ABE2E02B5068A200285DB8 /* ChoreListView.swift */; };
 		C4ABE2E42B5069FA00285DB8 /* StaffView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ABE2E32B5069FA00285DB8 /* StaffView.swift */; };
 		C4ABE2E72B506B0E00285DB8 /* Staff.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ABE2E62B506B0E00285DB8 /* Staff.swift */; };
@@ -49,6 +51,8 @@
 /* Begin PBXFileReference section */
 		C41194922B53249500FA863B /* StaffItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffItemView.swift; sourceTree = "<group>"; };
 		C41194942B53274000FA863B /* StaffListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffListView.swift; sourceTree = "<group>"; };
+		C41B35862B586E27001C2CD7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C41B358A2B586EA5001C2CD7 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		C4ABE2E02B5068A200285DB8 /* ChoreListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreListView.swift; sourceTree = "<group>"; };
 		C4ABE2E32B5069FA00285DB8 /* StaffView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffView.swift; sourceTree = "<group>"; };
 		C4ABE2E62B506B0E00285DB8 /* Staff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Staff.swift; sourceTree = "<group>"; };
@@ -97,6 +101,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C41B35852B586E18001C2CD7 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				C41B35862B586E27001C2CD7 /* User.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		C41B35882B586E80001C2CD7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C41B35892B586E89001C2CD7 /* Auth */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C41B35892B586E89001C2CD7 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				C41B358A2B586EA5001C2CD7 /* LoginViewModel.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		C4ABE2E22B5069D800285DB8 /* Staff */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +160,7 @@
 		C4C0D3722B4C88E900C4FB7B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C41B35852B586E18001C2CD7 /* Auth */,
 				C4ABE2E52B506AFE00285DB8 /* Staff */,
 				C4C0D3732B4C891400C4FB7B /* Chore.swift */,
 				C4C0D3752B4C896D00C4FB7B /* ChoreItem.swift */,
@@ -162,6 +191,7 @@
 		C4E6415F2B48690C00A3B18B /* Tsanyela */ = {
 			isa = PBXGroup;
 			children = (
+				C41B35882B586E80001C2CD7 /* ViewModels */,
 				C4C0D3722B4C88E900C4FB7B /* Models */,
 				C4C0D3692B4C834700C4FB7B /* Views */,
 				C4E6418A2B486C0E00A3B18B /* Scenes */,
@@ -340,11 +370,13 @@
 				C4ABE2E12B5068A200285DB8 /* ChoreListView.swift in Sources */,
 				C4C0D36D2B4C84DB00C4FB7B /* ChoreListItemView.swift in Sources */,
 				C4C0D36B2B4C839900C4FB7B /* ProfileView.swift in Sources */,
+				C41B35872B586E27001C2CD7 /* User.swift in Sources */,
 				C4C0D3712B4C85B600C4FB7B /* DateView.swift in Sources */,
 				C4C0D36F2B4C856C00C4FB7B /* ChoreListItem.swift in Sources */,
 				C4E641632B48690C00A3B18B /* ContentView.swift in Sources */,
 				C41194952B53274000FA863B /* StaffListView.swift in Sources */,
 				C4ABE2E72B506B0E00285DB8 /* Staff.swift in Sources */,
+				C41B358B2B586EA5001C2CD7 /* LoginViewModel.swift in Sources */,
 				C4E6418E2B486C7400A3B18B /* NavigationMenu.swift in Sources */,
 				C4E641612B48690C00A3B18B /* TsanyelaApp.swift in Sources */,
 				C4ABE2E42B5069FA00285DB8 /* StaffView.swift in Sources */,
