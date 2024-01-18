@@ -11,24 +11,40 @@ struct LoginView: View {
 
     var body: some View {
         VStack {
+            Spacer()
+            Text("Login").font(.system(size: 40)).fontWeight(.bold)
             TextField("Username", text: $viewModel.username)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
+//                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .background(Color(.systemGray6)).cornerRadius(5.0)
             
             SecureField("Password", text: $viewModel.password)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
+                .background(Color(.systemGray6)).cornerRadius(5.0)
+
             
             if viewModel.isLoading {
                 ProgressView()
             } else {
-                Button("Log In") {
+                Button(action: {
                     Task {
                         await viewModel.login()
                     }
+                }) {
+                    Text("Log In")
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(5.0)
                 }
                 .disabled(viewModel.username.isEmpty || viewModel.password.isEmpty)
             }
+            
+            Button(action: {}, label: {
+                Text("Forgot Password?")
+            })
+            Spacer()
             
             if let errorMessage = viewModel.errorMessage {
                 Text(errorMessage)

@@ -122,7 +122,6 @@
 		C41B35892B586E89001C2CD7 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				C41B358A2B586EA5001C2CD7 /* LoginViewModel.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -202,6 +201,7 @@
 		C4E6415F2B48690C00A3B18B /* Tsanyela */ = {
 			isa = PBXGroup;
 			children = (
+				C41B358A2B586EA5001C2CD7 /* LoginViewModel.swift */,
 				C41B35882B586E80001C2CD7 /* ViewModels */,
 				C4C0D3722B4C88E900C4FB7B /* Models */,
 				C4C0D3692B4C834700C4FB7B /* Views */,
