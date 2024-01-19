@@ -8,6 +8,7 @@ import SwiftUI
 
 struct LoginView: View {
     @StateObject private var viewModel = LoginViewModel()
+var onLogin: () -> Void
 
     var body: some View {
         VStack {
@@ -56,7 +57,7 @@ struct LoginView: View {
         .padding()
     }
 }
-
-#Preview {
-    LoginView()
-}
+//
+//#Preview {
+//    LoginView()
+//}
