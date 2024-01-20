@@ -9,7 +9,17 @@ import SwiftUI
 
 @main
 struct TsanyelaApp: App {
+    @State private var isLoggedIn = false
+    
     var body: some Scene {
-            NavigationMenu()
+        WindowGroup {
+            #if isLoggedIn
+                NavigationMenu()
+            #else
+                LoginView(onLogin: {
+                    self.isLoggedIn = true
+                })
+            #endif
+        }
     }
 }
