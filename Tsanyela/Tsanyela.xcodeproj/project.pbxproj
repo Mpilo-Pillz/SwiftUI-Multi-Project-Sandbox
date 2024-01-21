@@ -12,6 +12,7 @@
 		C41B35872B586E27001C2CD7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41B35862B586E27001C2CD7 /* User.swift */; };
 		C41B358B2B586EA5001C2CD7 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41B358A2B586EA5001C2CD7 /* LoginViewModel.swift */; };
 		C41B358E2B587078001C2CD7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41B358D2B587078001C2CD7 /* LoginView.swift */; };
+		C4688DB92B5D991D005CFD00 /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4688DB82B5D991D005CFD00 /* TextInputView.swift */; };
 		C4ABE2E12B5068A200285DB8 /* ChoreListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ABE2E02B5068A200285DB8 /* ChoreListView.swift */; };
 		C4ABE2E42B5069FA00285DB8 /* StaffView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ABE2E32B5069FA00285DB8 /* StaffView.swift */; };
 		C4ABE2E72B506B0E00285DB8 /* Staff.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ABE2E62B506B0E00285DB8 /* Staff.swift */; };
@@ -55,6 +56,7 @@
 		C41B35862B586E27001C2CD7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C41B358A2B586EA5001C2CD7 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		C41B358D2B587078001C2CD7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		C4688DB82B5D991D005CFD00 /* TextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
 		C4ABE2E02B5068A200285DB8 /* ChoreListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreListView.swift; sourceTree = "<group>"; };
 		C4ABE2E32B5069FA00285DB8 /* StaffView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffView.swift; sourceTree = "<group>"; };
 		C4ABE2E62B506B0E00285DB8 /* Staff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Staff.swift; sourceTree = "<group>"; };
@@ -134,6 +136,14 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
+		C4688DB72B5D98F7005CFD00 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				C4688DB82B5D991D005CFD00 /* TextInputView.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
 		C4ABE2E22B5069D800285DB8 /* Staff */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +166,7 @@
 		C4C0D3692B4C834700C4FB7B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C4688DB72B5D98F7005CFD00 /* Controls */,
 				C41B358C2B587067001C2CD7 /* Auth */,
 				C4ABE2E22B5069D800285DB8 /* Staff */,
 				C4C0D36A2B4C839900C4FB7B /* ProfileView.swift */,
@@ -389,6 +400,7 @@
 				C4ABE2E72B506B0E00285DB8 /* Staff.swift in Sources */,
 				C41B358B2B586EA5001C2CD7 /* LoginViewModel.swift in Sources */,
 				C4E6418E2B486C7400A3B18B /* NavigationMenu.swift in Sources */,
+				C4688DB92B5D991D005CFD00 /* TextInputView.swift in Sources */,
 				C41B358E2B587078001C2CD7 /* LoginView.swift in Sources */,
 				C4E641612B48690C00A3B18B /* TsanyelaApp.swift in Sources */,
 				C4ABE2E42B5069FA00285DB8 /* StaffView.swift in Sources */,

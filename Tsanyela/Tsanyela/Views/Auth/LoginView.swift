@@ -14,10 +14,7 @@ var onLogin: () -> Void
         VStack {
             Spacer()
             Text("Login").font(.system(size: 40)).fontWeight(.bold)
-            TextField("Username", text: $viewModel.username)
-                .padding()
-//                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .background(Color(.systemGray6)).cornerRadius(5.0)
+            TextInputView(placeholder: "Username", textValue: $viewModel.username)
             
             SecureField("Password", text: $viewModel.password)
                 .padding()
