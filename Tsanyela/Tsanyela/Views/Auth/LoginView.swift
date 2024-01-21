@@ -15,11 +15,7 @@ var onLogin: () -> Void
             Spacer()
             Text("Login").font(.system(size: 40)).fontWeight(.bold)
             TextInputView(placeholder: "Username", textValue: $viewModel.username)
-            
-            SecureField("Password", text: $viewModel.password)
-                .padding()
-                .background(Color(.systemGray6)).cornerRadius(5.0)
-
+            TextInputView(placeholder: "Password", textValue: $viewModel.password, isSecure: true)
             
             if viewModel.isLoading {
                 ProgressView()
