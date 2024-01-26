@@ -8,9 +8,14 @@ import SwiftUI
 
 struct LoginView: View {
     @StateObject private var viewModel = LoginViewModel()
+    @State private var showRegistration = false
+    
+    @State private var navigationDestination: NavigationDestination?
+    
 var onLogin: () -> Void
 
     var body: some View {
+        NavigationView {
         VStack {
             Spacer()
             Text("Login").font(.system(size: 40)).fontWeight(.bold)
@@ -35,9 +40,21 @@ var onLogin: () -> Void
                 .disabled(viewModel.username.isEmpty || viewModel.password.isEmpty)
             }
             
-            Button(action: {}, label: {
-                Text("Forgot Password?")
-            })
+          
+                VStack {
+                    Text("Forgot Password?")
+                    Button("Already have an Account?") {
+//                        navigationDestination = .register
+                        showRegistration = true
+                    }.sheet(isPresented: $showRegistration, content: {
+                        RegisterView(onBack: {
+                            navigationDestination = nil
+                        })
+                    })
+                    
+                    
+                }
+            
             Spacer()
             
             if let errorMessage = viewModel.errorMessage {
@@ -48,6 +65,7 @@ var onLogin: () -> Void
             Spacer()
         }
         .padding()
+        }
     }
 }
 //

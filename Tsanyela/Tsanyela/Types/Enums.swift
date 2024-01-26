@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+enum NavigationDestination {
+    case register
+    // Add more cases for other destinations as needed
+}
