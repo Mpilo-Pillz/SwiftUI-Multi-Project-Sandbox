@@ -15,6 +15,7 @@
 		C4688DB92B5D991D005CFD00 /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4688DB82B5D991D005CFD00 /* TextInputView.swift */; };
 		C4688DBB2B619EBF005CFD00 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4688DBA2B619EBF005CFD00 /* RegisterView.swift */; };
 		C4688DBD2B619FE3005CFD00 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4688DBC2B619FE3005CFD00 /* RegisterViewModel.swift */; };
+		C4688DC02B63EFB3005CFD00 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4688DBF2B63EFB3005CFD00 /* Enums.swift */; };
 		C4ABE2E12B5068A200285DB8 /* ChoreListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ABE2E02B5068A200285DB8 /* ChoreListView.swift */; };
 		C4ABE2E42B5069FA00285DB8 /* StaffView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ABE2E32B5069FA00285DB8 /* StaffView.swift */; };
 		C4ABE2E72B506B0E00285DB8 /* Staff.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ABE2E62B506B0E00285DB8 /* Staff.swift */; };
@@ -61,6 +62,7 @@
 		C4688DB82B5D991D005CFD00 /* TextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
 		C4688DBA2B619EBF005CFD00 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		C4688DBC2B619FE3005CFD00 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		C4688DBF2B63EFB3005CFD00 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		C4ABE2E02B5068A200285DB8 /* ChoreListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreListView.swift; sourceTree = "<group>"; };
 		C4ABE2E32B5069FA00285DB8 /* StaffView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffView.swift; sourceTree = "<group>"; };
 		C4ABE2E62B506B0E00285DB8 /* Staff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Staff.swift; sourceTree = "<group>"; };
@@ -128,6 +130,8 @@
 		C41B35892B586E89001C2CD7 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				C41B358A2B586EA5001C2CD7 /* LoginViewModel.swift */,
+				C4688DBC2B619FE3005CFD00 /* RegisterViewModel.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -147,6 +151,14 @@
 				C4688DB82B5D991D005CFD00 /* TextInputView.swift */,
 			);
 			path = Controls;
+			sourceTree = "<group>";
+		};
+		C4688DBE2B63EEE6005CFD00 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				C4688DBF2B63EFB3005CFD00 /* Enums.swift */,
+			);
+			path = Types;
 			sourceTree = "<group>";
 		};
 		C4ABE2E22B5069D800285DB8 /* Staff */ = {
@@ -217,8 +229,7 @@
 		C4E6415F2B48690C00A3B18B /* Tsanyela */ = {
 			isa = PBXGroup;
 			children = (
-				C4688DBC2B619FE3005CFD00 /* RegisterViewModel.swift */,
-				C41B358A2B586EA5001C2CD7 /* LoginViewModel.swift */,
+				C4688DBE2B63EEE6005CFD00 /* Types */,
 				C41B35882B586E80001C2CD7 /* ViewModels */,
 				C4C0D3722B4C88E900C4FB7B /* Models */,
 				C4C0D3692B4C834700C4FB7B /* Views */,
@@ -404,6 +415,7 @@
 				C4C0D36F2B4C856C00C4FB7B /* ChoreListItem.swift in Sources */,
 				C4E641632B48690C00A3B18B /* ContentView.swift in Sources */,
 				C41194952B53274000FA863B /* StaffListView.swift in Sources */,
+				C4688DC02B63EFB3005CFD00 /* Enums.swift in Sources */,
 				C4ABE2E72B506B0E00285DB8 /* Staff.swift in Sources */,
 				C41B358B2B586EA5001C2CD7 /* LoginViewModel.swift in Sources */,
 				C4E6418E2B486C7400A3B18B /* NavigationMenu.swift in Sources */,

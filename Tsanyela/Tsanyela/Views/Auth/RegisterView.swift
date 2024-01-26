@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct RegisterView: View {
+    @StateObject private var viewModel = RegisterViewModel()
+    var onBack: () -> Void
+    
     var body: some View {
         VStack {
          Spacer()
@@ -17,10 +20,15 @@ struct RegisterView: View {
             TextInputView(placeholder: "Last Name", textValue: $viewModel.username)
             TextInputView(placeholder: "Password", textValue: $viewModel.password, isSecure: true)
             TextInputView(placeholder: "Confirm Password", textValue: $viewModel.password, isSecure: true)
+            Button("Back") {
+                        onBack()
+                    }
         }
     }
 }
 
 #Preview {
-    RegisterView()
+    RegisterView(onBack: {
+        
+    })
 }
