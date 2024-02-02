@@ -19,8 +19,12 @@ class LoginViewModel: ObservableObject {
             return
         }
         
-        isLoading = true
-        defer { isLoading = false }
+//        isLoading = true
+//        defer { isLoading = false }
+        
+        DispatchQueue.main.async {
+                self.isLoading = true
+            }
         
         let loginURL = URL(string: "http://localhost:3000/tsanyela/auth/login")!
         var request = URLRequest(url: loginURL)
@@ -30,23 +34,29 @@ class LoginViewModel: ObservableObject {
         let body: [String: String] = ["email": email, "password": password]
         request.httpBody = try? JSONSerialization.data(withJSONObject: body, options: [])
         
-        isLoading = true
+//        isLoading = true
         
         do {
             //            let user = try await loginUser(username: email, password: password)
-            let (data, response) = try await URLSession.shared.data(for: request)
+            let (data, _) = try await URLSession.shared.data(for: request)
             
             if let loginResponse = try? JSONDecoder().decode(LoginResponse.self, from: data)  {
-                print("Access Token: \(loginResponse.access_token)")
-                UserDefaults.standard.set(loginResponse.access_token, forKey: "access_token")
-                return
+                DispatchQueue.main.async {
+                    print("Access Token: \(loginResponse.access_token)")
+                    UserDefaults.standard.set(loginResponse.access_token, forKey: "access_token")
+                    self.isLoading = false
+                }
+                
+                
             } else {
-                print("decoding failed")
+                DispatchQueue.main.async {
+                                print("Failed to decode response")
+                            }
             }
             
         } catch {
-            print("Login request failed with error: \(error)")
             DispatchQueue.main.async {
+                print("Login request failed with error: \(error)")
                 self.errorMessage = "Login failed: \(error.localizedDescription)"
 //                self.isLoading = false
             }
