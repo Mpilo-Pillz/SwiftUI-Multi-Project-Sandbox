@@ -19,7 +19,7 @@ var onLogin: () -> Void
         VStack {
             Spacer()
             Text("Login").font(.system(size: 40)).fontWeight(.bold)
-            TextInputView(placeholder: "Username", textValue: $viewModel.username)
+            TextInputView(placeholder: "Username", textValue: $viewModel.email)
             TextInputView(placeholder: "Password", textValue: $viewModel.password, isSecure: true)
             
             if viewModel.isLoading {
@@ -37,7 +37,7 @@ var onLogin: () -> Void
                         .foregroundColor(.white)
                         .cornerRadius(5.0)
                 }
-                .disabled(viewModel.username.isEmpty || viewModel.password.isEmpty)
+                .disabled(viewModel.email.isEmpty || viewModel.password.isEmpty)
             }
             
           
