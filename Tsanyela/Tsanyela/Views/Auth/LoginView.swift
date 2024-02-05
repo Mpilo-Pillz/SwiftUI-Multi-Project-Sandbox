@@ -49,6 +49,7 @@ var onLogin: () -> Void
                     }.sheet(isPresented: $showRegistration, content: {
                         RegisterView(onBack: {
                             navigationDestination = nil
+                            showRegistration = false
                         })
                     })
                     
